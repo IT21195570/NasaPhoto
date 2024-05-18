@@ -1,9 +1,6 @@
 import React from "react";
-
 import { Link, useNavigate } from "react-router-dom";
-
 import classnames from "classnames";
-// reactstrap components
 import {
   Collapse,
   NavbarBrand,
@@ -13,6 +10,10 @@ import {
   Nav,
   Container,
   Button,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from "reactstrap";
 
 function ExamplesNavbar() {
@@ -56,7 +57,6 @@ function ExamplesNavbar() {
     }
   };
 
-
   return (
     <Navbar
       className={classnames("fixed-top", navbarColor)}
@@ -72,7 +72,8 @@ function ExamplesNavbar() {
             title="NASA UNIVERSE"
             tag={Link}
           >
-           <i className="nc-icon nc-spaceship"></i> NASA UNIVERSE
+            
+            <i className="nc-icon nc-spaceship"></i> NASA UNIVERSE
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -92,17 +93,24 @@ function ExamplesNavbar() {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Explore
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem tag={Link} to="/nasaphoto">
+                  Daily Photo
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/marsrover">
+                  Mars Rover
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <NavItem>
-              <NavLink to="/nasaphoto" tag={Link}>
-             DAILY PHOTO
+              <NavLink to="" tag={Link}>
+                Blog
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink to="/marsrover" tag={Link}>
-             MARS ROVER
-              </NavLink>
-            </NavItem>
-            
             <NavItem>
               <Button
                 className="btn-round"
