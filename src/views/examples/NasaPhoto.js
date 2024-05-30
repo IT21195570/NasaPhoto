@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { DatePicker } from 'antd';
-import { CalendarOutlined } from '@ant-design/icons';
+// import { CalendarOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import DemoFooter from "components/Footers/DemoFooter.js";

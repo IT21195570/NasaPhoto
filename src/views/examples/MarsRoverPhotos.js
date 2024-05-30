@@ -44,7 +44,7 @@ export default function MarsRoverPhotos() {
     if (selectedRover && selectedCamera) {
       fetchPhoto();
     }
-  }, [selectedRover, selectedCamera]);
+  }, [selectedRover, selectedCamera, fetchPhoto] );
 
   const handleRoverChange = (event) => {
     setSelectedRover(event.target.value);

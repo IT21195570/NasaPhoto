@@ -11,8 +11,7 @@ function DemoFooter() {
             <ul>
               <li>
                 <a
-                  href="https://api.nasa.gov"
-                  target="_blank"
+                  href="https://api.nasa.gov" target="_blank" rel="noreferrer"
                 >
                   APIs
                 </a>
